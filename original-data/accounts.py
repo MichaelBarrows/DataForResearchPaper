@@ -17,7 +17,7 @@ def number_of_accounts_in_dataset():
     store_result(str(len(accounts)))
     
 def store_result(total):
-    helpers.path_checker(dataset.output_data)
+    helpers.path_checker(dataset.output_data_store)
     output_file = 'total_unique_accounts_in_all_datasets.csv'
 
     helpers.data_to_file_two_values(
@@ -28,7 +28,7 @@ def store_result(total):
             ]
         ],
         '',
-        dataset.output_data + '/' + output_file
+        dataset.output_data_store + '/' + output_file
     )
 
 
