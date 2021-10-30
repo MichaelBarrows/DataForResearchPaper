@@ -44,5 +44,5 @@ def sort_dict(dictionary):
 
 def print_df_headings(file):
     df = load_dataset(file)
-    for heading in file.head():
+    for heading in df.head():
         print(heading)
