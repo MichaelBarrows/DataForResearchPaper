@@ -13,9 +13,8 @@ def dataframe_to_csv(pd_df, filename):
     pd_df.to_csv(filename, index=False, quoting=csv.QUOTE_NONNUMERIC)
     return
 
-def data_to_file_two_values(data, headings, filename):
+def data_to_file_two_values(data, filename):
     with open(filename, mode='w') as file_writer:
-        file_writer.write(headings + "\n")
         for row in data:
             file_writer.write(str(row[0]) + ',"' + str(row[1]) + '"' + "\n")
     return

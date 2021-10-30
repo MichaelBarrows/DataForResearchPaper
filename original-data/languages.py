@@ -27,7 +27,6 @@ def store_result(total):
                 str(total)
             ]
         ],
-        '',
         dataset.output_data_store + '/' + output_file
     )
 
