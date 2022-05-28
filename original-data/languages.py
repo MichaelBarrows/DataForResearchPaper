@@ -9,7 +9,7 @@ def get_language_counts():
     total = 0
     for ds in dataset.files:
         print(ds)
-        df = helpers.load_dataset(ds)
+        df = helpers.load_dataset(dataset.dataset + ds)
         for index, row in df.iterrows():
             total += 1
             if row['tweet_language'] not in langs:

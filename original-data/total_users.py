@@ -11,7 +11,7 @@ def process():
     for ds in dataset.files:
         print(ds)
         df = ''
-        df = import_dataset(ds)
+        df = import_dataset(dataset.dataset + ds)
         for index, row in df.iterrows():
             if row.userid in store:
                 store[row.userid] += 1
